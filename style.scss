@@ -1,0 +1,93 @@
+@import "compass";
+
+// colors
+$baseColor: #fff;
+$subColor: #ddd;
+$keyColor: #999;
+$fontColor: #999;
+
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: $fontColor;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Header
+------------------------------------------------------------*/
+.header-img {
+    background-image: url("images/l7_header_img.jpg");
+    height: 250px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* main
+------------------------------------------------------------*/
+section {
+  padding: 20px;
+}
+
+.container {
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+  }
+  .contents {
+    margin: 8px;
+  }
+  .midashi {
+    margin: 10px 0;
+  }
+  .midashi2 {
+    background-color: $subColor;
+    padding: 25px 0;
+  }
+  p {
+    color: $baseColor;
+    background-color: $keyColor;
+    padding: 50px 0;
+  }
+
+/* footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 40px 28px;
+  .midashi3 {
+    font-size: 0.8em;
+    color: $fontColor;
+    margin-bottom: 10px;
+  }
+  .button {
+    font-size: 0.8em;
+    color: $baseColor;
+    background-color: keyColor;
+    width: 200px;
+    margin: auto;
+    padding: 8px 0;
+    @include border-radius(4px);
+  }
+}
+
+
+
+// desktop 
+@media (min-width: 768px) {
+  .header-img {
+    height: 500px;
+  }
+  .container {
+  flex-direction: row;
+  }
+  .contents {
+  flex: 1;
+  }
+}
