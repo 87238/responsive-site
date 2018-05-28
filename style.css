@@ -1,78 +1,68 @@
-/* Base
-------------------------------------------------------------*/
 html {
   font-size: 62.5%; }
 
-body {
-  color: #999;
-  font-size: 1.6rem;
-  font-weight: bold;
-  text-align: center; }
-
-/* Header
-------------------------------------------------------------*/
 .header-img {
   background-image: url("images/l7_header_img.jpg");
-  height: 250px;
+  height: 500px;
   width: 100%;
   background-size: cover;
   background-position: center center; }
+  @media (max-width: 768px) {
+    .header-img {
+      height: 250px; } }
 
-/* main
-------------------------------------------------------------*/
-section {
-  padding: 20px; }
+main {
+  padding: 30px;
+  color: #999;
+  font-weight: bold;
+  font-size: 2rem; }
+  main .main-title {
+    text-align: center;
+    margin-bottom: 20px; }
+  main .flexbox {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 768px) {
+      main .flexbox {
+        flex-direction: column; } }
+  main .box {
+    width: 32%;
+    background-color: #ddd;
+    text-align: center; }
+    @media (max-width: 768px) {
+      main .box {
+        width: 100%;
+        margin-bottom: 15px; } }
+    main .box h2 {
+      padding: 20px 0; }
+    main .box p {
+      padding: 60px 0;
+      background-color: #999;
+      color: #fff; }
 
-.container {
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-between;
-  -webkit-flex-direction: column;
-  flex-direction: column; }
-
-.contents {
-  margin: 8px; }
-
-.midashi {
-  margin: 10px 0; }
-
-.midashi2 {
-  background-color: #ddd;
-  padding: 25px 0; }
-
-p {
-  color: #fff;
-  background-color: #999;
-  padding: 50px 0; }
-
-/* footer
-------------------------------------------------------------*/
 footer {
   background-color: #ddd;
-  padding: 40px 28px; }
-  footer .midashi3 {
-    font-size: 0.8em;
-    color: #999;
-    margin-bottom: 10px; }
-  footer .button {
-    font-size: 0.8em;
+  padding: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #999; }
+  footer h3 {
+    text-align: center;
+    padding-bottom: 10px; }
+  footer .footer-button {
+    width: 32%;
+    background-color: #999;
     color: #fff;
-    background-color: keyColor;
-    width: 200px;
     margin: auto;
-    padding: 8px 0;
+    padding: 10px 0;
+    text-decoration: none;
+    display: block;
+    text-align: center;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px; }
-
-@media (min-width: 768px) {
-  .header-img {
-    height: 500px; }
-
-  .container {
-    flex-direction: row; }
-
-  .contents {
-    flex: 1; } }
+    @media (max-width: 768px) {
+      footer .footer-button {
+        width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
